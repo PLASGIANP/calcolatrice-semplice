@@ -1,0 +1,112 @@
+#include <stdio.h>
+float addizione(float x,float y);
+float sottrazione(float x,float y);
+float moltiplicazione(float x,float y);
+float divisione(float x,float y);
+unsigned resto(int x,int y);
+unsigned radice(float x,float y);
+float potenza (float x,float y);
+float main(void)
+{
+	float a,b,n;
+	double ris;
+	printf("Inserire quale operazione si desidera fare");
+	printf("1:addizione/n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza");
+	scanf("%f",&n);
+	if(n==1)
+	{
+		printf("inserire i due valori da sommare:");
+		scanf("%f%f",&a,&b);
+		ris=addizione(a,b);
+		printf("%f questo e'il risultato dell'addizione",ris);
+	}
+	 if(n==2)
+	{
+		printf("inserire i due valori da sottrarre:");
+		scanf("%f%f",&a,&b);
+		ris=sottrazione(a,b);
+		printf("%f questo e'il risultato della sottrazione",ris);
+	}
+	 if(n==3)
+	{
+		printf("inserire i due valori da moltiplicare:");
+		scanf("%f%f",&a,&b);
+		ris=moltiplicazione(a,b);
+		printf("%f questo e'il risultato della moltiplicazione",ris);
+	}
+   if(n==4)
+	{
+		printf("inserire i due valori da dividere:");
+		scanf("%f%f",&a,&b);
+		ris=divisione(a,b);
+		printf("%f questo e'il risultato della divisione",ris);
+	}
+	 if(n==5)
+	{
+		printf("inserire i due valori da cui si vuole conoscere il resto:");
+		scanf("%f%f",&a,&b);
+		ris=divisione(a,b);
+		printf("%f questo e'il resto risultante",ris);
+	}
+  if(n==6)
+	{
+		printf("inserire i due valori il primo e' l'indice della radice mentre il secondo il radicando :");
+		scanf("%f%f",&a,&b);
+		ris=radice(a,b);
+		printf("%f questo e'il risultato della radice",ris);
+	}
+	 if(n==7)
+	{
+		printf("inserire i due valori da elevare a potenza,il primo valore e' l'esponente il secondo e'la base:");
+		scanf("%f%f",&a,&b);
+		ris=potenza(a,b);
+		printf("%f questo e'il risultato della potenza",ris);
+	}
+	return 0;
+}
+float addizione(float x, float y)
+{
+  double s;
+  s = x + y;
+  return s;
+}
+
+float sottrazione(float x, float y)
+{
+  double d;
+  d = x - y;
+  return d;
+}
+
+float moltiplicazione(float x, float y)
+{
+  double p;
+  p = x * y;
+  return p;
+}
+
+float divisione(float x, float y)
+{
+  double q;
+  q = x / y;
+  return q;
+}
+
+unsigned resto(int x, int y)
+{
+  int r;
+  r = x % y;
+  return r;
+}
+float potenza (float x,float y)
+{
+  float t;
+  t=pow(x,y);
+  return t;
+}
+unsigned radice(float x,float y)
+{
+unsigned float z;
+z=pow(x,1.0/ y);
+return z;
+}
