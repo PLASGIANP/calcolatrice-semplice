@@ -4,7 +4,7 @@ float addizione(float x,float y);
 float sottrazione(float x,float y);
 float moltiplicazione(float x,float y);
 float divisione(float x,float y);
-unsigned resto(int x,int y);
+unsigned int resto(int x,int y);
 float radice(float x,float y);
 float potenza (float x,float y);
 float main(void)
@@ -93,7 +93,7 @@ float divisione(float x, float y)
   return q;
 }
 
-unsigned resto(int x, int y)
+int resto(int x, int y)
 {
   int r;
   r = x % y;
