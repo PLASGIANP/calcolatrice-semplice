@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 float addizione(float x,float y);
 float sottrazione(float x,float y);
 float moltiplicazione(float x,float y);
@@ -11,7 +12,7 @@ float main(void)
 	float a,b,n;
 	double ris;
 	printf("Inserire quale operazione si desidera fare");
-	printf("1:addizione/n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza");
+	printf("1:addizione/n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n");
 	scanf("%f",&n);
 	if(n==1)
 	{
@@ -50,14 +51,14 @@ float main(void)
 	}
   if(n==6)
 	{
-		printf("inserire i due valori il primo e' l'indice della radice mentre il secondo il radicando :");
+		printf("inserire i due valori il primo e'il radicando mentre il secondo e' l'indice della radice :");
 		scanf("%f%f",&a,&b);
 		ris=radice(a,b);
 		printf("%f questo e'il risultato della radice",ris);
 	}
 	 if(n==7)
 	{
-		printf("inserire i due valori da elevare a potenza,il primo valore e' l'esponente il secondo e'la base:");
+		printf("inserire i due valori da elevare a potenza,il primo valore e' la base il secondo e'l'esponente della potenza:");
 		scanf("%f%f",&a,&b);
 		ris=potenza(a,b);
 		printf("%f questo e'il risultato della potenza",ris);
@@ -106,7 +107,7 @@ float potenza (float x,float y)
 }
 unsigned radice(float x,float y)
 {
-unsigned float z;
+float z;
 z=pow(x,1.0/ y);
 return z;
 }
