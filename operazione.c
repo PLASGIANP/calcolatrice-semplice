@@ -5,7 +5,7 @@ float sottrazione(float x,float y);
 float moltiplicazione(float x,float y);
 float divisione(float x,float y);
 unsigned resto(int x,int y);
-unsigned radice(float x,float y);
+float radice(float x,float y);
 float potenza (float x,float y);
 float main(void)
 {
@@ -105,7 +105,7 @@ float potenza (float x,float y)
   t=pow(x,y);
   return t;
 }
-unsigned radice(float x,float y)
+float radice(float x,float y)
 {
 float z;
 z=pow(x,1.0/ y);
