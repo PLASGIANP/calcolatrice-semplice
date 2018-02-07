@@ -4,15 +4,16 @@ float addizione(float x,float y);
 float sottrazione(float x,float y);
 float moltiplicazione(float x,float y);
 float divisione(float x,float y);
-unsigned int resto(int x,int y);
+int resto(int x,int y);
 float radice(float x,float y);
 float potenza (float x,float y);
 float main(void)
 {
 	float a,b,n;
+	int c,d,resto;
 	double ris;
 	printf("Inserire quale operazione si desidera fare");
-	printf("1:addizione/n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n");
+	printf("\n1:addizione\n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n");
 	scanf("%f",&n);
 	if(n==1)
 	{
@@ -45,9 +46,9 @@ float main(void)
 	 if(n==5)
 	{
 		printf("inserire i due valori da cui si vuole conoscere il resto:");
-		scanf("%f%f",&a,&b);
+		scanf("%d%d",&c,&d);
 		ris=divisione(a,b);
-		printf("%f questo e'il resto risultante",ris);
+		printf("%d questo e'il resto risultante",resto);
 	}
   if(n==6)
 	{
@@ -67,28 +68,28 @@ float main(void)
 }
 float addizione(float x, float y)
 {
-  double s;
+  float s;
   s = x + y;
   return s;
 }
 
 float sottrazione(float x, float y)
 {
-  double d;
+  float d;
   d = x - y;
   return d;
 }
 
 float moltiplicazione(float x, float y)
 {
-  double p;
+  float p;
   p = x * y;
   return p;
 }
 
 float divisione(float x, float y)
 {
-  double q;
+  float q;
   q = x / y;
   return q;
 }
@@ -107,7 +108,7 @@ float potenza (float x,float y)
 }
 float radice(float x,float y)
 {
-float z;
-z=pow(x,1.0/ y);
-return z;
+  float z;
+  z=pow(x,1.0/ y);
+  return z;
 }
