@@ -10,7 +10,6 @@ float potenza (float x,float y);
 float main(void)
 {
 	float a,b,n;
-	int c,d,resto;
 	double ris;
 	printf("Inserire quale operazione si desidera fare");
 	printf("\n1:addizione\n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n");
@@ -36,7 +35,7 @@ float main(void)
 		ris=moltiplicazione(a,b);
 		printf("%f questo e'il risultato della moltiplicazione",ris);
 	}
-   if(n==4)
+         if(n==4)
 	{
 		printf("inserire i due valori da dividere:");
 		scanf("%f%f",&a,&b);
@@ -46,11 +45,11 @@ float main(void)
 	 if(n==5)
 	{
 		printf("inserire i due valori da cui si vuole conoscere il resto:");
-		scanf("%d%d",&c,&d);
-		ris=divisione(a,b);
-		printf("%d questo e'il resto risultante",resto);
+		scanf("%f%f",&a,&b);
+		ris=resto(a,b);
+		printf("%f questo e'il resto risultante",ris);
 	}
-  if(n==6)
+  	 if(n==6)
 	{
 		printf("inserire i due valori il primo e'il radicando mentre il secondo e' l'indice della radice :");
 		scanf("%f%f",&a,&b);
