@@ -8,6 +8,7 @@ int resto(int x,int y);
 float radice(float x,float y);
 float potenza (float x,float y);
 int MCD(int x,int y);
+int fattoriale(int x);
 float main(void)
 {
 	float a,b,n;
@@ -70,6 +71,13 @@ float main(void)
 		scanf("%f%f",&a,&b);
 		printf("%f questo e' il risultato del MCD",MCD(a,b));
 	}
+	if(n==9)
+	{
+		printf("inserire il valore con cui effettuare il fattoriale");
+		scanf("%f",&a);
+		ris=fattoriale(a)
+		printf("Ecco il valore del fattoriale",ris);
+	}
 	return 0;
 }
 float addizione(float x, float y)
@@ -128,4 +136,11 @@ int MCD(int x,int y)
 	}
 	else
 	return MCD(y,resto);
+}
+int fattoriale(int x)
+{
+if (x==0) 
+return 1;
+x×= x×fattoriale(x-1);
+return x;
 }
