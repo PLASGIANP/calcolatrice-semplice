@@ -7,12 +7,13 @@ float divisione(float x,float y);
 int resto(int x,int y);
 float radice(float x,float y);
 float potenza (float x,float y);
+int MCD(int x,int y);
 float main(void)
 {
 	float a,b,n;
 	double ris;
 	printf("Inserire quale operazione si desidera fare");
-	printf("\n1:addizione\n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n");
+	printf("\n1:addizione\n2:sottrazione\n3:moltiplicazione\n4:divisione\n5:resto\n6:radice\n7:potenza\n8:MCD");
 	scanf("%f",&n);
 	if(n==1)
 	{
@@ -63,6 +64,12 @@ float main(void)
 		ris=potenza(a,b);
 		printf("%f questo e'il risultato della potenza",ris);
 	}
+	if(n==8)
+	{
+		printf("inserire i due valori per fare l'MCD");
+		scanf("%f%f",&a,&b);
+		printf("%f questo e' il risultato del MCD",MCD(a,b));
+	}
 	return 0;
 }
 float addizione(float x, float y)
@@ -110,4 +117,15 @@ float radice(float x,float y)
   float z;
   z=pow(x,1.0/ y);
   return z;
+}
+int MCD(int x,int y)
+{
+	int resto;
+	resto=x%y;
+	if(resto==0)
+	{
+		return y;
+	}
+	else
+	return MCD(y,resto);
 }
