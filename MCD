@@ -1,0 +1,22 @@
+#include<stdio.h>
+int MCD(int x,int y);
+int main(void)
+{
+	int m,n;
+	printf("Inserire due numeri\n");
+	scanf("%d%d",&n,&n);
+	printf("il MCD tra i numeri interi");
+	printf("Il MCD tra i numeri inseriti e':%d",MCD(m,n));
+	return 0;
+}
+int MCD(int x,int y)
+{
+	int resto;
+	resto=x%y;
+	if(resto==0)
+	{
+		return y;
+	}
+	else
+	return MCD(y,resto);
+}
