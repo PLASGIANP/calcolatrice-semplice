@@ -4,7 +4,7 @@ int main(void)
 {
   float x1,x2,a,b,c,x,delta;
   printf("Questo e' un programma che calcola le equazioni di secondo grado di tipo ax^2+bx+c=0\n");
-  printf("Inserisci i tre numeri a,b,c\n");
+  printf("Inserisci i tre coefficienti a,b,c\n");
   scanf("%f%f%f",&a,&b,&c);
   if ((a!=0)&&(b!=0)&&(c!=0))
   {
