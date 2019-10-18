@@ -54,7 +54,7 @@ int main()
 	}
   	 if(n==6)
 	{
-		cout<<"Inserire i due valori il primo e'il radicando mentre il secondo e' l'indice della radice :"<<endl;
+		cout<<"Inserire i due valori il primo e' il radicando mentre il secondo e' l'indice della radice :"<<endl;
 		cin>>a>>b;
 		ris=radice(a,b);
 		cout<<"Questo e'il risultato della radice:"<<ris<<endl;
@@ -83,6 +83,11 @@ int main()
 	{
 	    cout<<"Vaffanculo a tua madre,e tanti saluti";
 	    return 0;
+	}
+	if(n<0 || n<9)
+	{
+		cout<<"A coso che t'ho detto?"<<endl;
+		return main();
 	}
 	return main();
 }
