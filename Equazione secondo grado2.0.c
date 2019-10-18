@@ -1,58 +1,58 @@
-#include <stdio.h>
-#include <math.h>
-int main(void)
+#include <iostream>
+#include <cmath>
+int main()
 {
   float x1,x2,a,b,c,x,delta;
-  printf("Questo e' un programma che calcola le equazioni di secondo grado di tipo ax^2+bx+c=0\n");
-  printf("Inserisci i tre coefficienti a,b,c\n");
-  scanf("%f%f%f",&a,&b,&c);
+  cout<<"Questo e' un programma che calcola le equazioni di secondo grado di tipo ax^2+bx+c=0"<<endl;
+  cout<<"Inserisci i tre coefficienti a,b,c\n"<<endl;
+  cin>>a>>b>>c;
   if ((a!=0)&&(b!=0)&&(c!=0))
   {
-      printf("L'equazione e' completa quindi:\n");
+      cout<<"L'equazione e' completa quindi:"<<endl;
       delta=(b*b-4*a*c);
       if (delta>0)
       {
           x1=(-b+sqrt(delta))/2*a;
           x2=(-b-sqrt(delta))/2*a;
-          printf("I valori di x1 e x2 sono:%f e %f",x1,x2);
+          cout<<"I valori di x1 e x2 sono:"<<x1<<x2<<endl;
       }
       if (delta<0)
       {
-          printf("Il delta e' minore di 0 quindi il risultato coincide con l'insieme dei numeri reali R");
+          cout<<"Il delta e' minore di 0 quindi il risultato coincide con l'insieme dei numeri reali R"<<endl;
       }
       if (delta==0)
       {
-          printf("Il delta e' uguale a 0 quindi esistono due soluzioni reali e coincidenti:\n");
+          cout<<"Il delta e' uguale a 0 quindi esistono due soluzioni reali e coincidenti:"<<endl;
           x1=-b/2a;
           x2=x1;
-          printf("Il risultato e': %f e %f",x1,x2);
+          cout<<"Il risultato e':"<<x1<<x2<<endl;
       }
   }
   if ((a==0)&&(b!=0)&&(c!=0))
   {
-     printf("Questa non e' una equazione di secondo grado ma essendo a=0 diventa di primo grado\n");
-     printf("Il risultato di questa equazione di primo grado e':");
+     cout<<"Questa non e' una equazione di secondo grado essendo a=0 ,quindi diventa di primo grado\n"<<endl;
+     cout<<"Il risultato di questa equazione di primo grado e':";
      x1=-c/b;
-     printf("%f",x1);
+     cout<<x1<<endl;
   }
   if ((a!=0)&&(b==0)&&(c!=0))
   {
-      printf("L'equazione e' pura quindi:\n");
+      cout<<"L'equazione e' pura quindi:"<<endl;
       x=-c/a;
       x1=sqrt(x);
       x2=-sqrt(x);
-      printf("I valori di x1 e x2 sono:%f e %f",x1,x2);
+      cout<<"I valori di x1 e x2 sono:"<<x1<<x2<<endl;
   }
   if ((a!=0)&&(b!=0)&&(c==0))
   {
-      printf("L'equazione e' spuria quindi:\n");
+      cout<<"L'equazione e' spuria quindi:"<<endl;
       x1=0;
       x2=-b/a;
-      printf("I valori di x1 e x2 sono:%f e %f",x1,x2);
+      cout<<"I valori di x1 e x2 sono:"<<x1<<x2<<endl;
   }
   if((a==0)&&(b==0)&&(c==0))
   {
-      printf("L'equazione e' indeterminata quindi l'insieme delle soluzioni coincide con l'insieme R\n");
+      cout<<"L'equazione e' indeterminata quindi l'insieme delle soluzioni coincide con l'insieme R"<<endl;
   }
   return 0;
 }
